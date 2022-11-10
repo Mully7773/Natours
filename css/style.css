@@ -49,6 +49,7 @@ body {
   left: 50%;
   /* Shifted 50% of the elements width to the left and to the top - transform/translate is in relation to the element itself not the parent element */
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .heading-primary {
@@ -57,6 +58,7 @@ body {
 
   /* Fix for slight shake near end of the animation */
   backface-visibility: hidden;
+  margin-bottom: 6rem;
 }
 
 .heading-primary-main {
@@ -113,4 +115,29 @@ body {
     opacity: 1;
     transform: translate(0);
   }
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
 }
