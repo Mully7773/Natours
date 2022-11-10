@@ -38,6 +38,11 @@ body {
   height: 3.5rem;
 }
 
+/* Animations can be reused like so */
+/* .logo:hover {
+  animation: moveInRight 1s ease-out;
+} */
+
 .text-box {
   position: absolute;
   top: 40%;
@@ -49,6 +54,9 @@ body {
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
+
+  /* Fix for slight shake near end of the animation */
+  backface-visibility: hidden;
 }
 
 .heading-primary-main {
@@ -56,6 +64,14 @@ body {
   font-size: 6rem;
   font-weight: 400;
   letter-spacing: 3.5rem;
+  /* to make up the deficit from letter spacing on ends of last letters */
+  margin-right: -3.5rem;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+
+  /* animation-iteration-count: 3; */
+  /* animation-delay: 3s; */
 }
 
 .heading-primary-sub {
@@ -63,4 +79,38 @@ body {
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 1.74rem;
+  margin-right: -1.74rem;
+  animation: moveInRight 1s ease-out;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  80% {
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
