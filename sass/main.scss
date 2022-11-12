@@ -1,11 +1,13 @@
-// Color variables
-$color-primary: #55c57a;
-$color-primary-light: #7ed56f;
-$color-primary-dark: #28b485;
+@use "abstracts/variables";
+@use "abstracts/functions";
+@use "abstracts/mixins";
 
-$color-grey-dark: #777;
-$color-white: #fff;
-$color-black: #000;
+@use "base/base";
+@use "base/animations";
+@use "base/typography";
+@use "base/utilities";
+
+@use "pages/home";
 
 *,
 *::before,
@@ -24,7 +26,7 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   text-rendering: optimizeLegibility;
-  color: $color-grey-dark;
+  color: variables.$color-grey-dark;
   box-sizing: border-box;
   font-size: 1.6rem;
   line-height: 1.7;
@@ -36,8 +38,8 @@ body {
   height: 95vh;
   background-image: linear-gradient(
       to right bottom,
-      rgba($color-primary-light, 0.801),
-      rgba($color-primary-dark, 0.793)
+      rgba(variables.$color-primary-light, 0.801),
+      rgba(variables.$color-primary-dark, 0.793)
     ),
     url(../img/hero.jpg);
   background-size: cover;
@@ -71,7 +73,7 @@ body {
 }
 
 .heading-primary {
-  color: $color-white;
+  color: variables.$color-white;
   text-transform: uppercase;
 
   /* Fix for slight shake near end of the animation */
@@ -165,7 +167,7 @@ body {
   }
   &:hover {
     transform: translateY(-0.3rem);
-    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    box-shadow: 0 1rem 2rem rgba(variables.$color-black, 0.2);
     &::after {
       transform: scaleX(1.4) scaleY(1.6);
       opacity: 0;
@@ -174,14 +176,14 @@ body {
 
   &:active {
     transform: translateY(-0.1rem);
-    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba(variables.$color-black, 0.2);
   }
 
   &--white {
-    background-color: $color-white;
-    color: $color-grey-dark;
+    background-color: variables.$color-white;
+    color: variables.$color-grey-dark;
     &::after {
-      background-color: $color-white;
+      background-color: variables.$color-white;
     }
   }
 
