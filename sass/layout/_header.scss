@@ -1,0 +1,40 @@
+@use "../abstracts/variables";
+
+.header {
+  position: relative;
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(variables.$color-primary-light, 0.801),
+      rgba(variables.$color-primary-dark, 0.793)
+    ),
+    url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+
+  &__logo {
+    height: 3.5rem;
+  }
+
+  /* Animations can be reused like so */
+  /* .logo:hover {
+        animation: moveInRight 1s ease-out;
+      } */
+
+  &__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    /* Shifted 50% of the elements width to the left and to the top - transform/translate is in relation to the element itself not the parent element */
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}
