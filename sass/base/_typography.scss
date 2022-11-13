@@ -66,3 +66,16 @@ body {
       rgba($color: variables.$color-black, $alpha: 0.2);
   }
 }
+
+.heading-tertiary {
+  font-size: variables.$default-font-size;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: variables.$default-font-size;
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
