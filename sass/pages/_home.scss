@@ -1,0 +1,8 @@
+@use "../abstracts/variables";
+
+.section-about {
+  background-color: variables.$color-grey-light-1;
+  padding: 25rem 0;
+  //   Apply negative margin to move it up toward top (-25 is difference between 95 and 75 in header)
+  margin-top: -25vh;
+}
