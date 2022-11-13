@@ -3,7 +3,6 @@
 
 .row {
   max-width: variables.$grid-width;
-  background-color: #eee;
   margin: 0 auto;
 
   //   Select everything except the last child
@@ -15,8 +14,6 @@
 
   //   Attribute selector that selects all elements in which the class attributes start with 'col-' -- replace ^ with * for any class which contains 'col-' -- replace ^ with $ for any class which ends with 'col-'
   [class^="col-"] {
-    color: white;
-    background-color: green;
     float: left;
 
     &:not(:last-child) {
