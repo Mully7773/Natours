@@ -6,3 +6,22 @@
   //   Apply negative margin to move it up toward top (-25 is difference between 95 and 75 in header)
   margin-top: -25vh;
 }
+
+.section-features {
+  padding: 20rem 0;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(variables.$color-primary-light, 0.801),
+      rgba(variables.$color-primary-dark, 0.793)
+    ),
+    url(../img/nat-4.jpg);
+  background-size: cover;
+
+  transform: skewY(-7deg);
+  margin-top: -10rem;
+
+  // Direct child of .section-features is 'row' - selects row only
+  & > * {
+    transform: skewY(7deg);
+  }
+}

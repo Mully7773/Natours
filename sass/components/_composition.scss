@@ -36,7 +36,7 @@
     }
   }
 
-  //   composition:hover composition__photo:not(:hover)
+  //   composition:hover composition__photo:not(:hover) -- other pictures shrink on hover
   &:hover &__photo:not(:hover) {
     transform: scale(0.95);
   }
