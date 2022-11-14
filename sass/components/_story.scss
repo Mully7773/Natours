@@ -12,9 +12,9 @@
   transform: skewX(-12deg);
 
   &__shape {
+    position: relative;
     width: 15rem;
     height: 15rem;
-    background-color: orangered;
     float: left;
     //makes text float around shape - must have a height and width and float as well
     -webkit-shape-outside: circle(50% at 50% 50%);
@@ -26,9 +26,35 @@
   &__img {
     // 100% of parent element (15rem)
     height: 100%;
+    transform: translateX(-4rem) scale(1.4);
+    backface-visibility: hidden;
+    transition: all 0.5s;
   }
 
   &__text {
     transform: skewX(12deg);
+  }
+
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: variables.$color-white;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s;
+    backface-visibility: hidden;
+  }
+
+  &:hover &__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover &__img {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(0.3rem) brightness(80%);
   }
 }
