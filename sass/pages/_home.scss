@@ -34,6 +34,7 @@
 }
 
 .section-stories {
+  // Necessary to correctly position the bg-video
+  position: relative;
   padding: 15rem 0;
-  background-color: variables.$color-grey-light-1;
 }
