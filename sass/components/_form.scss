@@ -35,12 +35,19 @@
     }
   }
 
-  &__input:focus {
-    outline: none;
-    box-shadow: 0 1rem 2rem rgba($color: variables.$color-black, $alpha: 0.1);
-    border-bottom: 0.3rem solid variables.$color-primary;
+  &__label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: 0.7rem;
+    display: block;
+    transition: all 0.3s;
   }
 
-  &__label {
+  //When placeholder is shown on the input element - use adjacent sibling selector - sibling element immediately after input
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
   }
 }
