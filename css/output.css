@@ -553,7 +553,8 @@ body {
   display: inline-block;
 }
 .form__radio-input {
-  display: none;
+  opacity: 0;
+  margin-right: -1.6rem;
 }
 .form__radio-label {
   font-size: 1.6rem;
@@ -586,6 +587,9 @@ body {
   transition: opacity 0.2s;
 }
 .form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
+  opacity: 1;
+}
+.form__radio-input:checked ~ .form__radio-label .form__radio-button::focus {
   opacity: 1;
 }
 
