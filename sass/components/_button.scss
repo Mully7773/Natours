@@ -1,6 +1,7 @@
 @use "../abstracts/variables";
 
 .btn {
+  &,  //for booking btn
   &:link,
   &:visited {
     text-transform: uppercase;
@@ -12,6 +13,10 @@
     position: relative;
     font-size: variables.$default-font-size;
     z-index: 0;
+
+    // Change for the <button> element in booking
+    border: none;
+    cursor: pointer;
   }
   &:hover {
     transform: translateY(-0.3rem);
@@ -22,7 +27,9 @@
     }
   }
 
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     transform: translateY(-0.1rem);
     box-shadow: 0 0.5rem 1rem rgba(variables.$color-black, 0.2);
   }
