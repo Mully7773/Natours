@@ -4,6 +4,7 @@
   background-color: variables.$color-grey-dark-3;
   padding: 10rem 0;
   font-size: 1.4rem;
+  color: variables.$color-grey-light-1;
 
   &__logo-box {
     // inline elements behave like text
@@ -17,6 +18,9 @@
   }
 
   &__navigation {
+    border-top: 0.1rem solid variables.$color-grey-dark;
+    padding-top: 2rem;
+    display: inline-block;
   }
 
   &__list {
@@ -34,14 +38,24 @@
     &:link,
     &:visited {
       color: variables.$color-grey-light-1;
+      background-color: variables.$color-grey-dark-3;
       text-decoration: none;
       text-transform: uppercase;
       display: inline-block;
+      transition: all 0.2s;
     }
     &:hover,
     &:active {
       color: variables.$color-primary;
       box-shadow: 0 1rem 2rem rgba($color: variables.$color-black, $alpha: 0.4);
+      transform: rotate(5deg) scale(1.3);
     }
+  }
+
+  &__copyright {
+    border-top: 0.1rem solid variables.$color-grey-dark;
+    padding-top: 2rem;
+    width: 80%;
+    float: right;
   }
 }
