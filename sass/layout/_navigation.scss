@@ -58,6 +58,8 @@
   &__link {
     &:link,
     &:visited {
+      // set to inline-block so that padding and translateX on hover are applied correctly
+      display: inline-block;
       font-size: 3rem;
       font-weight: 300;
       color: variables.$color-white;
@@ -66,19 +68,26 @@
       text-transform: uppercase;
       background-image: linear-gradient(
         120deg,
-        orangered 0%,
-        orangered 50%,
+        transparent 0%,
+        transparent 50%,
         variables.$color-white 50%
       );
       //   Extra 20% because of the 120 deg set on background image
       background-size: 220%;
       transition: all 0.4s;
+
+      span {
+        margin-right: 1.5rem;
+        display: inline-block;
+      }
     }
 
     &:hover,
     &:active {
       // Background shifts to the left side
       background-position: 100%;
+      color: variables.$color-primary;
+      transform: translateX(1rem);
     }
   }
 }
