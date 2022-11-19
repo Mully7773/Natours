@@ -24,7 +24,7 @@
       <label for="navi-toggle" class="navigation__button">
         <span class="navigation__icon">&nbsp;</span>
       </label>
-      <div class="navigation__background">&nbsp;</div>
+      <div class="navigation__background" id="navigation__fixed">&nbsp;</div>
       <nav class="navigation__nav">
         <ul class="navigation__list">
           <li class="navigation__item">
@@ -456,8 +456,8 @@
           <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img" />
         </div>
         <div class="popup__right">
-          <!-- This href '#section-tours' is necessary to remove the styles from pseudoclass :target so that the popup will disappear -->
-          <a href="#section-tours" class="popup__close">&times;</a>
+          <!-- This href '#section-tours' is necessary to remove the styles from pseudoclass :target so that the popup will disappear; however, I will point it to the fixed navigation button on the page, so that the position on the screen does not jump -->
+          <a href="#navigation__fixed" class="popup__close">&times;</a>
           <h2 class="heading-secondary u-margin-bottom-small">
             Start booking now
           </h2>
