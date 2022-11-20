@@ -1,10 +1,15 @@
 @use "../abstracts/variables";
+@use "../abstracts/mixins";
 
 .section-about {
   background-color: variables.$color-grey-light-1;
   padding: 25rem 0;
   //   Apply negative margin to move it up toward top (-25 is difference between 95 and 75 in header)
   margin-top: -25vh;
+
+  @include mixins.respond(tab-port) {
+    padding: 20rem 0;
+  }
 }
 
 .section-features {
@@ -24,6 +29,9 @@
   & > * {
     transform: skewY(7deg);
   }
+  @include mixins.respond(tab-port) {
+    padding: 15rem 0;
+  }
 }
 
 .section-tours {
@@ -31,12 +39,20 @@
   padding: 25rem 0 15rem 0;
 
   margin-top: -10rem;
+
+  @include mixins.respond(tab-port) {
+    padding: 20rem 0 10rem 0;
+  }
 }
 
 .section-stories {
   // Necessary to correctly position the bg-video
   position: relative;
   padding: 15rem 0;
+
+  @include mixins.respond(tab-port) {
+    padding: 10rem 0;
+  }
 }
 
 .section-book {
@@ -46,6 +62,10 @@
     variables.$color-primary-light,
     variables.$color-primary-dark
   );
+
+  @include mixins.respond(tab-port) {
+    padding: 10rem 0;
+  }
 }
 
 .book {

@@ -15,6 +15,10 @@
     // inline elements behave like text
     text-align: center;
     margin-bottom: 8rem;
+
+    @include mixins.respond(tab-port) {
+      margin-bottom: 6rem;
+    }
   }
 
   &__logo {
@@ -71,6 +75,7 @@
     @include mixins.respond(tab-port) {
       width: 100%;
       float: none;
+      text-align: center;
     }
   }
 }
