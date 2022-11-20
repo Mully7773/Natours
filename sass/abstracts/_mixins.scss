@@ -34,6 +34,8 @@ big desktop
 // em and rem are not affected by root font size
 // 1em = 16px
 
+// ORDER: base + typography > general layout + grid > page layout > components
+
 // 600px
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {

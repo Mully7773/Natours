@@ -13,16 +13,22 @@ html {
   // 1rem = 10px
   font-size: 62.5%;
 
-  // @include mixins.respond(phone) {
-  //   font-size: 50%;
-  // }
+  // Always place the larger media queries before the smaller ones (with the exception of big-desktop because that is a min-width query) - we want to overwrite larger queries with smaller ones as our viewport shrinks
 
-  @include mixins.respond(tab-port) {
-    font-size: 50%; //1 rem = 8px, 8/16 = 50%
-  }
   @include mixins.respond(tab-land) {
+    //width < 1200?
     font-size: 56.25%; //1 rem = 9px, 9/16 = 56.25%
   }
+
+  @include mixins.respond(tab-port) {
+    //width < 900?
+    font-size: 50%; //1 rem = 8px, 8/16 = 50%
+  }
+
+  // @include mixins.respond(phone) {
+  //   font-size: 30%;
+  // }
+
   @include mixins.respond(big-desktop) {
     font-size: 75%; //1rem = 12px 12/16 = 75%
   }
@@ -30,4 +36,9 @@ html {
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
+
+  @include mixins.respond(tab-port) {
+    padding: 0;
+  }
 }
