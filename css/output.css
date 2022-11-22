@@ -924,7 +924,7 @@ body {
 .header {
   position: relative;
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.801), rgba(40, 180, 133, 0.793)), url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.801), rgba(40, 180, 133, 0.793)), url(../img/hero-small.jpg);
   background-size: cover;
   background-position: top;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
@@ -933,6 +933,11 @@ body {
   /* .logo:hover {
         animation: moveInRight 1s ease-out;
       } */
+}
+@media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+  .header {
+    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.801), rgba(40, 180, 133, 0.793)), url(../img/hero.jpg);
+  }
 }
 @media (max-width: 37.5em) {
   .header {

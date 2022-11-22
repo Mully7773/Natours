@@ -9,12 +9,32 @@
       rgba(variables.$color-primary-light, 0.801),
       rgba(variables.$color-primary-dark, 0.793)
     ),
-    url(../img/hero.jpg);
+    url(../img/hero-small.jpg);
   background-size: cover;
   background-position: top;
 
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+
+  // For high resolution screens and when the width is larger than 600px (usually phones) - separation with commas is like saying 'or' - same as commented code before
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(variables.$color-primary-light, 0.801),
+        rgba(variables.$color-primary-dark, 0.793)
+      ),
+      url(../img/hero.jpg);
+  }
+
+  // When user has a huge screen (2000px), use the larger resolution picture
+  // @media (min-width: 2000px) {
+  //   background-image: linear-gradient(
+  //       to right bottom,
+  //       rgba(variables.$color-primary-light, 0.801),
+  //       rgba(variables.$color-primary-dark, 0.793)
+  //     ),
+  //     url(../img/hero.jpg);
+  // }
 
   @include mixins.respond(phone) {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
