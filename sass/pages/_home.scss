@@ -19,7 +19,7 @@
       rgba(variables.$color-primary-light, 0.801),
       rgba(variables.$color-primary-dark, 0.793)
     ),
-    url(../img/nat-4.jpg);
+    url(../img/nat-4-small.jpg);
   background-size: cover;
 
   transform: skewY(-7deg);
@@ -31,6 +31,16 @@
   }
   @include mixins.respond(tab-port) {
     padding: 10rem 0;
+  }
+
+  // For bigger screens and higher resolutions, use the bigger image
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(variables.$color-primary-light, 0.801),
+        rgba(variables.$color-primary-dark, 0.793)
+      ),
+      url(../img/nat-4.jpg);
   }
 }
 
