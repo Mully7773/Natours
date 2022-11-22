@@ -507,8 +507,19 @@
     <div class="popup" id="popup">
       <div class="popup__content">
         <div class="popup__left">
-          <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img" />
-          <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img" />
+          <img
+            srcset="./img/nat-8-1x.jpg 1x, ./img/nat-8.jpg 2x"
+            alt="Woman on a tour"
+            src="./img/nat-8.jpg"
+            class="popup__img"
+          />
+
+          <img
+            srcset="./img/nat-9-1x.jpg 1x, ./img/nat-9.jpg 2x"
+            alt="Man on a tour"
+            src="./img/nat-9.jpg"
+            class="popup__img"
+          />
         </div>
         <div class="popup__right">
           <!-- This href '#section-tours' is necessary to remove the styles from pseudoclass :target so that the popup will disappear; however, I will point it to the fixed navigation button on the page, so that the position on the screen does not jump -->

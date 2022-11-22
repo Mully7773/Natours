@@ -850,7 +850,6 @@ body {
   .popup__left {
     display: flex;
     width: 50%;
-    vertical-align: baseline;
   }
 }
 .popup__right {
