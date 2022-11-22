@@ -3,7 +3,7 @@
 
 .header {
   position: relative;
-  height: 95vh;
+  height: 85vh;
   background-image: linear-gradient(
       to right bottom,
       rgba(variables.$color-primary-light, 0.801),
@@ -13,11 +13,19 @@
   background-size: cover;
   background-position: top;
 
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  // -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  // clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
 
-  // For high resolution screens and when the width is larger than 600px (usually phones) - separation with commas is like saying 'or' - same as commented code before
-  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    height: 95vh;
+  }
+
+  // For high resolution screens and when the width is larger than 600px (usually phones) - separation with commas is like saying 'or' - same as commented code before (-webkit- for safari)
+  @media (min-resolution: 192dpi) and (min-width: 37.5em),
+    (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+    (min-width: 125em) {
     background-image: linear-gradient(
         to right bottom,
         rgba(variables.$color-primary-light, 0.801),

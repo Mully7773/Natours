@@ -14,6 +14,16 @@
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
+  backdrop-filter: blur(10px);
+  background-color: rgba($color: variables.$color-black, $alpha: 0.3);
+
+  // Feature query:
+  // If the user's browser supports this CSS feature, then it will apply the code in the block, otherwise it will use what we have above (Chrome currently supports backdrop filter blur())
+  @supports (-webkit-backdrop-filter: blur(10px)) or
+    (backdrop-filter: blur(10px)) {
+    backdrop-filter: blur(10px);
+    background-color: rgba($color: variables.$color-black, $alpha: 0.3);
+  }
 
   &__content {
     @include mixins.absCenter;

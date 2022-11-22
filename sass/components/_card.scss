@@ -17,6 +17,7 @@
     left: 0;
     width: 100%;
     // Hides back part of an element
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 0.3rem;
     // allows us to see border radius from image
