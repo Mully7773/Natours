@@ -316,11 +316,18 @@
         <div class="row">
           <div class="story">
             <figure class="story__shape">
-              <img
-                class="story__img"
-                src="./img/nat-8.jpg"
-                alt="Person on a tour"
-              />
+              <picture class="story__img">
+                <source
+                  srcset="./img/nat-8-1x.jpg 1x, ./img/nat-8.jpg 2x"
+                  media="(max-width: 37.5em)"
+                />
+                <img
+                  srcset="./img/nat-8-1x.jpg 1x, ./img/nat-8.jpg 2x"
+                  alt="Woman on a tour"
+                  src="./img/nat-8.jpg"
+                  class="story__img"
+                />
+              </picture>
               <figcaption class="story__caption">Mary Smith</figcaption>
             </figure>
             <div class="story__text">
@@ -340,11 +347,18 @@
         <div class="row">
           <div class="story">
             <figure class="story__shape">
-              <img
-                class="story__img"
-                src="./img/nat-9.jpg"
-                alt="Person on a tour"
-              />
+              <picture class="story__img">
+                <source
+                  srcset="./img/nat-9-1x.jpg 1x, ./img/nat-9.jpg 2x"
+                  media="(max-width: 37.5em)"
+                />
+                <img
+                  srcset="./img/nat-9-1x.jpg 1x, ./img/nat-9.jpg 2x"
+                  alt="Man on a tour"
+                  src="./img/nat-9.jpg"
+                  class="story__img"
+                />
+              </picture>
               <figcaption class="story__caption">Jack Wilson</figcaption>
             </figure>
             <div class="story__text">
