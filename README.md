@@ -4,7 +4,7 @@ This is a fully responsive landing page for a fictional tour website. The themes
 
 ## Link
 
-Check it out here:
+Check it out here: https://natours-nickm.netlify.app
 
 ## Screenshots
 
